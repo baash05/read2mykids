@@ -2,12 +2,6 @@
 #
 # Install the pg driver:
 #   gem install pg
-# On Mac OS X with macports:
-#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
-# On Windows:
-#   gem install pg
-#       Choose the win32 build.
-#       Install PostgreSQL and put its /bin directory on your path.
 #
 # Configure Using Gemfile
 # gem 'pg'
@@ -17,8 +11,8 @@ development:
   encoding: unicode
   database: read2mykids_development
   pool: 5
-  username: read2mykids
-  password:
+  username: postgres
+  password: password
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,13 +37,13 @@ test:
   encoding: unicode
   database: read2mykids_test
   pool: 5
-  username: read2mykids
-  password:
+  username: postgres
+  password: password
 
 production:
   adapter: postgresql
   encoding: unicode
   database: read2mykids_production
-  pool: 5
+  pool: 10
   username: read2mykids
   password:
